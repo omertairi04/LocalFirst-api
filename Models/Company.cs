@@ -10,6 +10,6 @@ public class Company : AppUser
     
     public Guid CityId { get; set; }
     public Cities City { get; set; }
-    
     // Products
+    public ICollection<Product> Products { get; set; }
 }

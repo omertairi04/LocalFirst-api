@@ -1,8 +1,8 @@
 using System.ComponentModel.DataAnnotations;
 
-namespace Local_Alternatives.Dtos.NormalUser;
+namespace Local_Alternatives.Dtos.Company;
 
-public class NormalUserRegisterDto
+public class CompanyRegisterDto
 {
     [Required] public string? UserName { get; set; }
     [Required] public string? Name { get; set; }

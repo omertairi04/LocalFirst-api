@@ -65,6 +65,11 @@ public class ApplicationDbContext : IdentityDbContext<AppUser>
             .WithMany(c => c.ProductSubCategories)
             .HasForeignKey(sc => sc.SubCategoryId);
 
+        builder.Entity<Product>()
+            .HasOne(p => p.Company)
+            .WithMany(c => c.Products)
+            .HasForeignKey(p => p.CompanyId);
+
         List<IdentityRole> roles = new List<IdentityRole>
         {
             new IdentityRole

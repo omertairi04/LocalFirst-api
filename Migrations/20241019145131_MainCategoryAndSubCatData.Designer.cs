@@ -3,6 +3,7 @@ using System;
 using Local_Alternatives.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
@@ -11,9 +12,11 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace Local_Alternatives.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20241019145131_MainCategoryAndSubCatData")]
+    partial class MainCategoryAndSubCatData
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -115,7 +118,7 @@ namespace Local_Alternatives.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Cities", (string)null);
+                    b.ToTable("Cities");
 
                     b.HasData(
                         new
@@ -665,7 +668,7 @@ namespace Local_Alternatives.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("MainCategory", (string)null);
+                    b.ToTable("MainCategory");
 
                     b.HasData(
                         new
@@ -751,7 +754,7 @@ namespace Local_Alternatives.Migrations
 
                     b.HasIndex("MainCategoryId");
 
-                    b.ToTable("SubCategory", (string)null);
+                    b.ToTable("SubCategory");
 
                     b.HasData(
                         new
@@ -1207,7 +1210,7 @@ namespace Local_Alternatives.Migrations
 
                     b.HasIndex("CityId");
 
-                    b.ToTable("AspNetUsers", null, t =>
+                    b.ToTable("AspNetUsers", t =>
                         {
                             t.Property("Address")
                                 .HasColumnName("NormalUser_Address");

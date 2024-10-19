@@ -17,10 +17,34 @@ public class ApplicationDbContext : IdentityDbContext<AppUser>
 
     public DbSet<AppUser> AppUsers { get; set; }
     public DbSet<Cities> Cities { get; set; }
+    public DbSet<Company> Companies { get; set; }
+    public DbSet<NormalUser> NormalUsers { get; set; }
 
     protected override void OnModelCreating(ModelBuilder builder)
     {
         base.OnModelCreating(builder);
+        
+        
+        // Configure the TPH inheritance for AppUser
+        builder.Entity<AppUser>()
+            .HasDiscriminator<string>("UserType")
+            .HasValue<Company>("Company")
+            .HasValue<NormalUser>("NormalUser");
+
+        builder.Entity<Cities>()
+            .HasKey(c => c.Id);
+
+        builder.Entity<Company>()
+            .HasOne(c => c.City)
+            .WithMany(c => c.Companies)
+            .HasForeignKey(c => c.CityId)
+            .OnDelete(DeleteBehavior.Cascade);
+        
+        builder.Entity<NormalUser>()
+            .HasOne(u => u.City)
+            .WithMany(c => c.NormalUsers)
+            .HasForeignKey(u => u.CityId)
+            .OnDelete(DeleteBehavior.Cascade);
 
         List<IdentityRole> roles = new List<IdentityRole>
         {
@@ -34,6 +58,11 @@ public class ApplicationDbContext : IdentityDbContext<AppUser>
                 Name = "User",
                 NormalizedName = "USER"
             },
+            new IdentityRole()
+            {
+                Name = "Company",
+                NormalizedName = "COMPANY"
+            }
         };
         builder.Entity<IdentityRole>().HasData(roles);
 
@@ -58,8 +87,6 @@ public class ApplicationDbContext : IdentityDbContext<AppUser>
             }
         }
 
-
-        // Seed the data into the database
         builder.Entity<Cities>().HasData(citiesList);
     }
 }

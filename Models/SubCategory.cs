@@ -9,4 +9,6 @@ public class SubCategory
     public DateTime UpdateAt { get; set; } = DateTime.UtcNow;
     public Guid MainCategoryId { get; set; }
     public MainCategory? MainCategory { get; set; }
+    
+    public ICollection<ProductSubCategories>? ProductSubCategories { get; set; } = null!;
 }

@@ -21,6 +21,8 @@ public class ApplicationDbContext : IdentityDbContext<AppUser>
     public DbSet<NormalUser> NormalUsers { get; set; }
     public DbSet<MainCategory> MainCategories { get; set; }
     public DbSet<SubCategory> SubCategories { get; set; }
+    public DbSet<Product> Products { get; set; }
+    public DbSet<ProductSubCategories> ProductSubCategories { get; set; }
     protected override void OnModelCreating(ModelBuilder builder)
     {
         base.OnModelCreating(builder);
@@ -51,6 +53,17 @@ public class ApplicationDbContext : IdentityDbContext<AppUser>
             .WithMany(c => c.SubCategories)
             .HasForeignKey(p => p.MainCategoryId)
             .OnDelete(DeleteBehavior.Cascade);
+        
+        builder.Entity<ProductSubCategories>()
+            .HasKey(sc => new { sc.ProductId, sc.SubCategoryId });
+        builder.Entity<ProductSubCategories>()
+            .HasOne(sc => sc.Product)
+            .WithMany(s => s.ProductSubCategories)
+            .HasForeignKey(sc => sc.ProductId);
+        builder.Entity<ProductSubCategories>()
+            .HasOne(sc => sc.SubCategory)
+            .WithMany(c => c.ProductSubCategories)
+            .HasForeignKey(sc => sc.SubCategoryId);
 
         List<IdentityRole> roles = new List<IdentityRole>
         {

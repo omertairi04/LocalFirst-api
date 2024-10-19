@@ -13,4 +13,7 @@ public class Cities
     public string Name { get; set; } = string.Empty;
     public string PrimaryCity { get; set; } = "Unknown";  // Default value
     public string Country { get; set; } = "North Macedonia";
+    
+    public virtual ICollection<Company> Companies { get; set; }
+    public virtual ICollection<NormalUser> NormalUsers { get; set; }
 }

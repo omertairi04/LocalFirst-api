@@ -127,3 +127,4 @@
 /home/omer/RiderProjects/Local-Alternatives/Local-Alternatives/obj/Debug/net8.0/Local-Alternatives.genruntimeconfig.cache
 /home/omer/RiderProjects/Local-Alternatives/Local-Alternatives/obj/Debug/net8.0/ref/Local-Alternatives.dll
 /home/omer/RiderProjects/Local-Alternatives/Local-Alternatives/bin/Debug/net8.0/mk.json
+/home/omer/RiderProjects/Local-Alternatives/Local-Alternatives/obj/Debug/net8.0/Local-Alternatives.sourcelink.json

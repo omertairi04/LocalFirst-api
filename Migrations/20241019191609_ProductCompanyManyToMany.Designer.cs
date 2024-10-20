@@ -3,6 +3,7 @@ using System;
 using Local_Alternatives.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
@@ -11,9 +12,11 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace Local_Alternatives.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20241019191609_ProductCompanyManyToMany")]
+    partial class ProductCompanyManyToMany
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -120,525 +123,525 @@ namespace Local_Alternatives.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("f8af2751-29f3-497a-813c-729461213c6b"),
+                            Id = new Guid("d7a6f4d2-7bba-43aa-920a-f1c4574f8757"),
                             Country = "North Macedonia",
                             Name = "Skopje",
                             PrimaryCity = "Skopje"
                         },
                         new
                         {
-                            Id = new Guid("fbf86d29-d160-4d11-b706-3b1615aa3ba6"),
+                            Id = new Guid("f8681d08-f9c9-4553-8d7e-f7d082f9148d"),
                             Country = "North Macedonia",
                             Name = "Kumanovo",
                             PrimaryCity = "Kumanovo"
                         },
                         new
                         {
-                            Id = new Guid("025f4e3b-f41b-47d1-888d-4a6f3258503c"),
+                            Id = new Guid("00ffb322-9cd0-49ba-95e2-8ed4fa3615f9"),
                             Country = "North Macedonia",
                             Name = "Bitola",
                             PrimaryCity = "Bitola"
                         },
                         new
                         {
-                            Id = new Guid("3b95a5aa-ca4a-45e4-9705-80c8f0da0cac"),
+                            Id = new Guid("71b3fa6a-11c4-4d79-bb8d-9f4a4cf78027"),
                             Country = "North Macedonia",
                             Name = "Prilep",
                             PrimaryCity = "Prilep"
                         },
                         new
                         {
-                            Id = new Guid("eab80c66-d40a-4314-8ab0-5371690e9af7"),
+                            Id = new Guid("9df3006a-3971-4025-a2a5-c1082b313973"),
                             Country = "North Macedonia",
                             Name = "Tetovo",
                             PrimaryCity = "Tetovo"
                         },
                         new
                         {
-                            Id = new Guid("97e4a2d3-67a8-494e-bd59-41d0cff4264e"),
+                            Id = new Guid("4b53dbcb-4db2-4605-8506-1e88a602f694"),
                             Country = "North Macedonia",
                             Name = "Štip",
                             PrimaryCity = "Štip"
                         },
                         new
                         {
-                            Id = new Guid("8ef1ae6f-ff2a-44cf-bbd2-20a50d078461"),
+                            Id = new Guid("96f62f04-edb7-445c-9626-452b757ecb2b"),
                             Country = "North Macedonia",
                             Name = "Veles",
                             PrimaryCity = "Veles"
                         },
                         new
                         {
-                            Id = new Guid("1a7d4053-d3e9-41fa-b53a-162be196b3ec"),
+                            Id = new Guid("45a947a7-5e43-44bd-9a5c-ba742adea69a"),
                             Country = "North Macedonia",
                             Name = "Ohrid",
                             PrimaryCity = "Ohrid"
                         },
                         new
                         {
-                            Id = new Guid("92335399-eb46-49d8-bf85-283c3e440d41"),
+                            Id = new Guid("705ed7ff-0de9-42b9-a5d8-8679e94ff5b9"),
                             Country = "North Macedonia",
                             Name = "Strumica",
                             PrimaryCity = "Strumica"
                         },
                         new
                         {
-                            Id = new Guid("24918afc-33b8-4752-99cb-7d5bba753bc3"),
+                            Id = new Guid("91bb85e1-e6a5-4401-a892-4902ba487641"),
                             Country = "North Macedonia",
                             Name = "Gostivar",
                             PrimaryCity = "Gostivar"
                         },
                         new
                         {
-                            Id = new Guid("63600c9d-5085-47a0-83ee-c393100d3d47"),
+                            Id = new Guid("35bb88b3-cc41-4ead-ab18-94bf0dd7299d"),
                             Country = "North Macedonia",
                             Name = "Kočani",
                             PrimaryCity = "Kočani"
                         },
                         new
                         {
-                            Id = new Guid("7482c496-29c3-4df1-86ef-d80e900c6ba7"),
+                            Id = new Guid("1e7312f4-bb44-4a4f-a4b8-263abe942dc0"),
                             Country = "North Macedonia",
                             Name = "Dračevo",
                             PrimaryCity = "Skopje"
                         },
                         new
                         {
-                            Id = new Guid("52dda469-cf00-4e21-991f-2868208434be"),
+                            Id = new Guid("f66ca15a-2f0a-45e1-8950-fdf58a25f1bd"),
                             Country = "North Macedonia",
                             Name = "Struga",
                             PrimaryCity = "Struga"
                         },
                         new
                         {
-                            Id = new Guid("d5b1c065-47c2-4d33-a9ea-34822c7176ae"),
+                            Id = new Guid("dd7d0571-ca79-4069-91ea-6ec036b3dee5"),
                             Country = "North Macedonia",
                             Name = "Debar",
                             PrimaryCity = "Debar"
                         },
                         new
                         {
-                            Id = new Guid("b7bf1e68-cf04-45d2-b97e-dc987f8276e6"),
+                            Id = new Guid("82ded2de-3cdc-4fec-8bd3-c2681c9e1721"),
                             Country = "North Macedonia",
                             Name = "Kriva Palanka",
                             PrimaryCity = "Kriva Palanka"
                         },
                         new
                         {
-                            Id = new Guid("8e03139a-dca0-4736-b318-279b99dc10f3"),
+                            Id = new Guid("2d22f2ca-9ccc-4dfe-b2c0-14c96655e700"),
                             Country = "North Macedonia",
                             Name = "Negotino",
                             PrimaryCity = "Negotino"
                         },
                         new
                         {
-                            Id = new Guid("411e15ff-d9dd-487a-8ed0-b05885c9cc39"),
+                            Id = new Guid("05445886-41b0-4c73-b140-d9e21661f799"),
                             Country = "North Macedonia",
                             Name = "Sveti Nikole",
                             PrimaryCity = "Sveti Nikole"
                         },
                         new
                         {
-                            Id = new Guid("781518d3-077f-4613-9204-6ee0ae6b5943"),
+                            Id = new Guid("d4a48abd-7c76-48d2-bd44-a3671e58ab4d"),
                             Country = "North Macedonia",
                             Name = "Probištip",
                             PrimaryCity = "Probištip"
                         },
                         new
                         {
-                            Id = new Guid("cf7cfb7b-5c42-47b7-89ff-5bbd424b9ed1"),
+                            Id = new Guid("3801ec5f-0cd5-4b59-8b86-e4835fed223b"),
                             Country = "North Macedonia",
                             Name = "Delčevo",
                             PrimaryCity = "Delčevo"
                         },
                         new
                         {
-                            Id = new Guid("2f60e1c2-5f4e-4237-afcb-eb78a5130e2a"),
+                            Id = new Guid("b7fcfbbe-7c6d-4d6f-a0f7-155cfbef39bf"),
                             Country = "North Macedonia",
                             Name = "Vinica",
                             PrimaryCity = "Vinica"
                         },
                         new
                         {
-                            Id = new Guid("812d80e3-f578-444b-8119-5132b596f856"),
+                            Id = new Guid("e016ed9f-009f-4b62-be5d-a0d4f0c62602"),
                             Country = "North Macedonia",
                             Name = "Aračinovo",
                             PrimaryCity = "Aračinovo"
                         },
                         new
                         {
-                            Id = new Guid("d6aa4125-32fe-435c-918b-76e99a5df617"),
+                            Id = new Guid("b4b937f5-9685-461a-9324-f5decfd00bb4"),
                             Country = "North Macedonia",
                             Name = "Kičevo",
                             PrimaryCity = "Kičevo"
                         },
                         new
                         {
-                            Id = new Guid("0893a4c1-56de-47d9-ae2c-6d42483b0f10"),
+                            Id = new Guid("1fe86a56-355c-40a8-876e-4e2fdad77f39"),
                             Country = "North Macedonia",
                             Name = "Kavadarci",
                             PrimaryCity = "Kavadarci"
                         },
                         new
                         {
-                            Id = new Guid("30a89fb8-fe3c-418c-b740-014b44f4b8fa"),
+                            Id = new Guid("eef107b6-442a-4d54-acc1-d4297c3452aa"),
                             Country = "North Macedonia",
                             Name = "Berovo",
                             PrimaryCity = "Berovo"
                         },
                         new
                         {
-                            Id = new Guid("f6536eed-7d55-428a-81ac-e7f5ba36c6cf"),
+                            Id = new Guid("9486af81-2b9f-4a3d-a858-a358b8839ffa"),
                             Country = "North Macedonia",
                             Name = "Kratovo",
                             PrimaryCity = "Kratovo"
                         },
                         new
                         {
-                            Id = new Guid("8855ddb6-838c-4137-aefc-835ad9ed7e5b"),
+                            Id = new Guid("cb10d3cc-c89b-4703-aec8-dbec5c1be065"),
                             Country = "North Macedonia",
                             Name = "Gevgelija",
                             PrimaryCity = "Gevgelija"
                         },
                         new
                         {
-                            Id = new Guid("b818537b-7254-45d7-bf3c-1e3243c4d049"),
+                            Id = new Guid("c7925be7-0f4b-4fa7-ab4e-99a4e4e1fb38"),
                             Country = "North Macedonia",
                             Name = "Vrapčište",
                             PrimaryCity = "Vrapčište"
                         },
                         new
                         {
-                            Id = new Guid("5d6f447a-ac9d-4eee-a44c-bc48d431b89f"),
+                            Id = new Guid("3cbe18fd-d27e-459e-97ad-89b058d630ad"),
                             Country = "North Macedonia",
                             Name = "Radoviš",
                             PrimaryCity = "Radoviš"
                         },
                         new
                         {
-                            Id = new Guid("7f754f14-5613-4943-9360-514c3f725993"),
+                            Id = new Guid("516755a5-5b52-44ad-813f-597b85586676"),
                             Country = "North Macedonia",
                             Name = "Kruševo",
                             PrimaryCity = "Kruševo"
                         },
                         new
                         {
-                            Id = new Guid("23c785bc-2f99-463c-91f8-fe7ca5aba7e6"),
+                            Id = new Guid("28beea88-dfe1-431d-8d0a-f2c7fa4ed8b5"),
                             Country = "North Macedonia",
                             Name = "Čegrane",
                             PrimaryCity = "Gostivar"
                         },
                         new
                         {
-                            Id = new Guid("ec61f45f-0c9f-4a0f-9df3-5038949511f3"),
+                            Id = new Guid("dc1fc6c6-73c2-48b2-b7cf-f52c874eed76"),
                             Country = "North Macedonia",
                             Name = "Makedonski Brod",
                             PrimaryCity = "Makedonski Brod"
                         },
                         new
                         {
-                            Id = new Guid("4d2e4a7e-e714-4585-94f8-6c6bab6de651"),
+                            Id = new Guid("173ecca3-08da-463c-8488-8af653697e23"),
                             Country = "North Macedonia",
                             Name = "Demir Kapija",
                             PrimaryCity = "Demir Kapija"
                         },
                         new
                         {
-                            Id = new Guid("cf6f66cc-c349-4c30-8b86-0ca459850931"),
+                            Id = new Guid("034943a4-6d95-4f7a-a339-60895ca53fb0"),
                             Country = "North Macedonia",
                             Name = "Kučevište",
                             PrimaryCity = "Čučer-Sandevo"
                         },
                         new
                         {
-                            Id = new Guid("7d2ce8db-e9eb-467f-8c31-b58765b8157c"),
+                            Id = new Guid("70ba8c54-aae5-4da1-a2ef-ca9a659e2b54"),
                             Country = "North Macedonia",
                             Name = "Tearce",
                             PrimaryCity = "Tearce"
                         },
                         new
                         {
-                            Id = new Guid("166c5267-9506-4f5a-9160-4b7d918866a6"),
+                            Id = new Guid("844fb9ed-e9f2-4c10-a8d1-2a373b888c06"),
                             Country = "North Macedonia",
                             Name = "Bogdanci",
                             PrimaryCity = "Bogdanci"
                         },
                         new
                         {
-                            Id = new Guid("ec2eba68-0167-4bfc-b6e1-94a5e52636b5"),
+                            Id = new Guid("adb86f24-420c-4bd6-a937-5b28afca2d96"),
                             Country = "North Macedonia",
                             Name = "Forino",
                             PrimaryCity = "Gostivar"
                         },
                         new
                         {
-                            Id = new Guid("e1ab486d-c21b-4df5-95ba-0e81f984c60e"),
+                            Id = new Guid("2d9ea9f3-2450-4b71-9750-7f218fb6acda"),
                             Country = "North Macedonia",
                             Name = "Rašče",
                             PrimaryCity = "Skopje"
                         },
                         new
                         {
-                            Id = new Guid("4fbd66e5-a163-4782-b94d-3c6f84f7964f"),
+                            Id = new Guid("bbce200c-4270-451d-8952-7859e91e3830"),
                             Country = "North Macedonia",
                             Name = "Rosoman",
                             PrimaryCity = "Rosoman"
                         },
                         new
                         {
-                            Id = new Guid("477deb82-43f3-401c-92df-f9c03742cd1f"),
+                            Id = new Guid("47ce2e9f-b015-4294-81ca-94e3953c914b"),
                             Country = "North Macedonia",
                             Name = "Demir Hisar",
                             PrimaryCity = "Demir Hisar"
                         },
                         new
                         {
-                            Id = new Guid("c14bd302-c7a7-4356-99a9-88cfb08f1eb2"),
+                            Id = new Guid("f545fa14-56d0-4fed-9498-29697032bd8d"),
                             Country = "North Macedonia",
                             Name = "Vevčani",
                             PrimaryCity = "Vevčani"
                         },
                         new
                         {
-                            Id = new Guid("94ae9912-9613-4b50-ba6d-285665da4809"),
+                            Id = new Guid("55745538-d40c-486a-b2d4-ae06bef25082"),
                             Country = "North Macedonia",
                             Name = "Gradsko",
                             PrimaryCity = "Gradsko"
                         },
                         new
                         {
-                            Id = new Guid("ae58f204-7d7c-4f22-b51c-9571454230bb"),
+                            Id = new Guid("4850c224-29d1-4473-b9fd-9b83dae354fd"),
                             Country = "North Macedonia",
                             Name = "Valandovo",
                             PrimaryCity = "Valandovo"
                         },
                         new
                         {
-                            Id = new Guid("9ffe3f15-e67f-4274-8675-850992592ed9"),
+                            Id = new Guid("e7446a18-9d7f-4d32-8a24-33df209e6555"),
                             Country = "North Macedonia",
                             Name = "Krivogaštani",
                             PrimaryCity = "Krivogaštani"
                         },
                         new
                         {
-                            Id = new Guid("ed8263e0-7143-4715-afeb-6352ec115587"),
+                            Id = new Guid("96ea4045-76a7-4856-bdf2-fc96d4e02c27"),
                             Country = "North Macedonia",
                             Name = "Pehčevo",
                             PrimaryCity = "Pehčevo"
                         },
                         new
                         {
-                            Id = new Guid("007670b2-0157-4f8a-bb42-9549b252290b"),
+                            Id = new Guid("1820561d-9bba-4350-b733-5368091df97b"),
                             Country = "North Macedonia",
                             Name = "Plasnica",
                             PrimaryCity = "Plasnica"
                         },
                         new
                         {
-                            Id = new Guid("4ee9f14c-6ca3-4775-b5d7-aadec6ea8627"),
+                            Id = new Guid("573b49d9-76b3-4c58-a69a-f8b471b6cdab"),
                             Country = "North Macedonia",
                             Name = "Zrnovci",
                             PrimaryCity = "Zrnovci"
                         },
                         new
                         {
-                            Id = new Guid("8e4accf9-b68b-4a77-8ad5-d5838a366417"),
+                            Id = new Guid("eb1df49a-a720-45c8-8202-9a87446527ab"),
                             Country = "North Macedonia",
                             Name = "Novaci",
                             PrimaryCity = "Novaci"
                         },
                         new
                         {
-                            Id = new Guid("e64187c5-ce61-4ac9-8d27-70314a97ee2c"),
+                            Id = new Guid("f6003682-8132-4707-9bd5-06f6d533409c"),
                             Country = "North Macedonia",
                             Name = "Bosilovo",
                             PrimaryCity = "Bosilovo"
                         },
                         new
                         {
-                            Id = new Guid("fd482c64-66c9-498d-becd-7f73d77beadb"),
+                            Id = new Guid("0865607d-4139-4128-8234-c1eb9fcaa89d"),
                             Country = "North Macedonia",
                             Name = "Mogila",
                             PrimaryCity = "Mogila"
                         },
                         new
                         {
-                            Id = new Guid("425e72bc-3bd1-4fb2-bae9-38674ac10207"),
+                            Id = new Guid("7693ec9a-7fb8-4877-8176-f94400acd89e"),
                             Country = "North Macedonia",
                             Name = "Novo Selo",
                             PrimaryCity = "Novo Selo"
                         },
                         new
                         {
-                            Id = new Guid("914421f9-4aba-4aaa-9d43-1d765fc4d2ac"),
+                            Id = new Guid("1b083b22-e089-46eb-b8ee-d3ace57a098d"),
                             Country = "North Macedonia",
                             Name = "Konče",
                             PrimaryCity = "Konče"
                         },
                         new
                         {
-                            Id = new Guid("b924ea1a-0f02-4b1b-aec6-e66490b596a2"),
+                            Id = new Guid("e26d8362-1a32-44d9-b077-68f20d14dea6"),
                             Country = "North Macedonia",
                             Name = "Rostuša",
                             PrimaryCity = "Mavrovo i Rostuše"
                         },
                         new
                         {
-                            Id = new Guid("165be06c-257c-4dad-a381-cef0d0002730"),
+                            Id = new Guid("7990e5aa-07c1-4d3a-87b7-30aab10fa5b7"),
                             Country = "North Macedonia",
                             Name = "Jegunovce",
                             PrimaryCity = "Jegunovce"
                         },
                         new
                         {
-                            Id = new Guid("06a2ef16-7b14-473d-957d-c15f344d7019"),
+                            Id = new Guid("051399f6-2318-4abe-a14f-4c728d16e244"),
                             Country = "North Macedonia",
                             Name = "Rankovce",
                             PrimaryCity = "Rankovce"
                         },
                         new
                         {
-                            Id = new Guid("39e45ae7-18f4-421e-b3ac-b0a923d799b3"),
+                            Id = new Guid("eccdc33c-84ea-447b-953c-5f2b92c20271"),
                             Country = "North Macedonia",
                             Name = "Sopište",
                             PrimaryCity = "Sopište"
                         },
                         new
                         {
-                            Id = new Guid("4eb2458d-03dd-47c0-a2a9-a00dd98ab1ba"),
+                            Id = new Guid("eb7ddb40-c0b2-4ca5-a0ce-ff9450619e1e"),
                             Country = "North Macedonia",
                             Name = "Obleševo",
                             PrimaryCity = "Češinovo-Obleševo"
                         },
                         new
                         {
-                            Id = new Guid("03d2191d-90c2-4d37-bcc5-037a01d95e18"),
+                            Id = new Guid("edcef169-f32e-4f25-96dc-ab10945b253d"),
                             Country = "North Macedonia",
                             Name = "Vasilevo",
                             PrimaryCity = "Vasilevo"
                         },
                         new
                         {
-                            Id = new Guid("d69ee675-1e38-46a3-b0c5-1e3dc2dacf17"),
+                            Id = new Guid("5070ef43-4f96-4805-8af1-6d820ffe3b42"),
                             Country = "North Macedonia",
                             Name = "Karbinci",
                             PrimaryCity = "Karbinci"
                         },
                         new
                         {
-                            Id = new Guid("69ff8764-0fd1-4f30-b4dc-b671d0d33fbe"),
+                            Id = new Guid("08029745-75ab-486b-9531-83a5b0f56f24"),
                             Country = "North Macedonia",
                             Name = "Lozovo",
                             PrimaryCity = "Lozovo"
                         },
                         new
                         {
-                            Id = new Guid("c5f2fc75-f50b-4844-898d-f2e0f4af35e1"),
+                            Id = new Guid("5a593281-2a73-4e6f-91a0-7220b8ab6af1"),
                             Country = "North Macedonia",
                             Name = "Staro Nagoričane",
                             PrimaryCity = "Staro Nagoričane"
                         },
                         new
                         {
-                            Id = new Guid("91371956-03c2-4044-80ca-57efbcf795ab"),
+                            Id = new Guid("50a2532f-e434-46aa-9ad6-a3dfc65f4873"),
                             Country = "North Macedonia",
                             Name = "Brvenica",
                             PrimaryCity = "Brvenica"
                         },
                         new
                         {
-                            Id = new Guid("42e2ddbc-f43f-4804-8714-888518853da6"),
+                            Id = new Guid("53914794-fdfe-454e-8084-97cfa582a623"),
                             Country = "North Macedonia",
                             Name = "Centar Župa",
                             PrimaryCity = "Centar Župa"
                         },
                         new
                         {
-                            Id = new Guid("892b4f0e-6db8-4859-9f85-1ea59b753251"),
+                            Id = new Guid("e40c38df-69bb-4e5d-8ee9-6e334f1a09d9"),
                             Country = "North Macedonia",
                             Name = "Dolneni",
                             PrimaryCity = "Dolneni"
                         },
                         new
                         {
-                            Id = new Guid("f1d0b372-38f6-420c-aada-fcee76d3f48d"),
+                            Id = new Guid("7fb50c61-bb51-48c1-8253-38b7d72a977b"),
                             Country = "North Macedonia",
                             Name = "Belčišta",
                             PrimaryCity = "Debarca"
                         },
                         new
                         {
-                            Id = new Guid("c50c1df2-3788-4ee9-9b3a-1c0eaade5de0"),
+                            Id = new Guid("fc021cfe-1a5a-4920-a2db-bd37d8c2b42f"),
                             Country = "North Macedonia",
                             Name = "Čučer-Sandevo",
                             PrimaryCity = "Čučer-Sandevo"
                         },
                         new
                         {
-                            Id = new Guid("693a4ec2-e826-4340-b5cf-773250eda66e"),
+                            Id = new Guid("e70a866c-3da3-4f4b-b805-77f01c61284c"),
                             Country = "North Macedonia",
                             Name = "Zelenikovo",
                             PrimaryCity = "Zelenikovo"
                         },
                         new
                         {
-                            Id = new Guid("82f0ce4d-177b-4798-9228-3c1f64b0b1c4"),
+                            Id = new Guid("2cc2082d-f8e6-4950-b919-c65c99e9179e"),
                             Country = "North Macedonia",
                             Name = "Petrovec",
                             PrimaryCity = "Petrovec"
                         },
                         new
                         {
-                            Id = new Guid("3e08b5a3-5005-460f-b9b3-9fd89e9930f9"),
+                            Id = new Guid("7dc38565-d5c3-4f3c-9d6b-e8de395e3ff0"),
                             Country = "North Macedonia",
                             Name = "Želino",
                             PrimaryCity = "Želino"
                         },
                         new
                         {
-                            Id = new Guid("74c9ab8c-8854-4545-8cb4-097d6c333acc"),
+                            Id = new Guid("0282fca5-da2f-42d6-bd6c-e88a32c0c02e"),
                             Country = "North Macedonia",
                             Name = "Star Dojran",
                             PrimaryCity = "Dojran"
                         },
                         new
                         {
-                            Id = new Guid("dc380844-2fe0-4831-932a-ded016d98b69"),
+                            Id = new Guid("7f24eb38-c1c3-4ee2-bb2b-fdd9a92b2b83"),
                             Country = "North Macedonia",
                             Name = "Studeničani",
                             PrimaryCity = "Studeničani"
                         },
                         new
                         {
-                            Id = new Guid("82c919f4-47d9-4a4d-88c9-f976f350987e"),
+                            Id = new Guid("cba9160f-98b5-431d-a8ae-9bb557969bae"),
                             Country = "North Macedonia",
                             Name = "Bogovinje",
                             PrimaryCity = "Bogovinje"
                         },
                         new
                         {
-                            Id = new Guid("56e772fc-94b2-443b-a8d2-2407e3159581"),
+                            Id = new Guid("cd13711c-19a5-44fc-bb78-40603518fc6a"),
                             Country = "North Macedonia",
                             Name = "Ilinden",
                             PrimaryCity = "Ilinden"
                         },
                         new
                         {
-                            Id = new Guid("c0d15b7f-c70f-4ecf-a113-3af6488a36ad"),
+                            Id = new Guid("a1c7a556-45ab-482d-921c-6a6d225704f3"),
                             Country = "North Macedonia",
                             Name = "Lipkovo",
                             PrimaryCity = "Lipkovo"
                         },
                         new
                         {
-                            Id = new Guid("5146e8f2-68a1-4297-a855-1cc74cd5d675"),
+                            Id = new Guid("2e0916a6-8132-4663-afc3-5e82cf859b6b"),
                             Country = "North Macedonia",
                             Name = "Makedonska Kamenica",
                             PrimaryCity = "Makedonska Kamenica"
                         },
                         new
                         {
-                            Id = new Guid("d89c7b33-dd87-4508-b668-5ff20a89e561"),
+                            Id = new Guid("923f1fc7-eda4-4c80-bd41-c614e76345da"),
                             Country = "North Macedonia",
                             Name = "Resen",
                             PrimaryCity = "Resen"
@@ -670,59 +673,59 @@ namespace Local_Alternatives.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("f3fc0e6e-3680-474c-8e6f-23308dcb0c4d"),
-                            CreatedAt = new DateTime(2024, 10, 20, 15, 8, 40, 399, DateTimeKind.Utc).AddTicks(7840),
+                            Id = new Guid("91eda985-20ca-4b8c-a815-1b94be9eed38"),
+                            CreatedAt = new DateTime(2024, 10, 19, 19, 16, 8, 654, DateTimeKind.Utc).AddTicks(4921),
                             Description = "Apparel and accessories",
                             Name = "Clothing",
-                            UpdateAt = new DateTime(2024, 10, 20, 15, 8, 40, 399, DateTimeKind.Utc).AddTicks(7849)
+                            UpdateAt = new DateTime(2024, 10, 19, 19, 16, 8, 654, DateTimeKind.Utc).AddTicks(4935)
                         },
                         new
                         {
-                            Id = new Guid("f2467b5e-dbdc-49d0-bc8e-bb50ff7152c0"),
-                            CreatedAt = new DateTime(2024, 10, 20, 15, 8, 40, 399, DateTimeKind.Utc).AddTicks(7882),
+                            Id = new Guid("8c2dd92a-03d6-4d8c-af45-3346ddb8f8fe"),
+                            CreatedAt = new DateTime(2024, 10, 19, 19, 16, 8, 654, DateTimeKind.Utc).AddTicks(4963),
                             Description = "Every day house hold items",
                             Name = "Household Items",
-                            UpdateAt = new DateTime(2024, 10, 20, 15, 8, 40, 399, DateTimeKind.Utc).AddTicks(7891)
+                            UpdateAt = new DateTime(2024, 10, 19, 19, 16, 8, 654, DateTimeKind.Utc).AddTicks(4977)
                         },
                         new
                         {
-                            Id = new Guid("b5ab8629-0325-4957-8d14-90c0958a1237"),
-                            CreatedAt = new DateTime(2024, 10, 20, 15, 8, 40, 399, DateTimeKind.Utc).AddTicks(7924),
+                            Id = new Guid("a46a2c92-a386-4e8f-b47d-8abecd242914"),
+                            CreatedAt = new DateTime(2024, 10, 19, 19, 16, 8, 654, DateTimeKind.Utc).AddTicks(5014),
                             Description = "Electronics",
                             Name = "Electronics",
-                            UpdateAt = new DateTime(2024, 10, 20, 15, 8, 40, 399, DateTimeKind.Utc).AddTicks(7938)
+                            UpdateAt = new DateTime(2024, 10, 19, 19, 16, 8, 654, DateTimeKind.Utc).AddTicks(5028)
                         },
                         new
                         {
-                            Id = new Guid("2953a775-a8e5-4221-aa90-76f67de9fc25"),
-                            CreatedAt = new DateTime(2024, 10, 20, 15, 8, 40, 399, DateTimeKind.Utc).AddTicks(7967),
+                            Id = new Guid("113e3004-76b3-4a28-a4e2-c6135914eb11"),
+                            CreatedAt = new DateTime(2024, 10, 19, 19, 16, 8, 654, DateTimeKind.Utc).AddTicks(5062),
                             Description = "Donate your books or medias.",
                             Name = "Books and Media",
-                            UpdateAt = new DateTime(2024, 10, 20, 15, 8, 40, 399, DateTimeKind.Utc).AddTicks(7976)
+                            UpdateAt = new DateTime(2024, 10, 19, 19, 16, 8, 654, DateTimeKind.Utc).AddTicks(5072)
                         },
                         new
                         {
-                            Id = new Guid("862b0000-7d7c-48e7-be79-10d23a400ab4"),
-                            CreatedAt = new DateTime(2024, 10, 20, 15, 8, 40, 399, DateTimeKind.Utc).AddTicks(8004),
+                            Id = new Guid("d1bf02fc-ee77-4993-bb0d-51cd0041f8d5"),
+                            CreatedAt = new DateTime(2024, 10, 19, 19, 16, 8, 654, DateTimeKind.Utc).AddTicks(5105),
                             Description = "Donate your Toys and Games.",
                             Name = "Toys and Games",
-                            UpdateAt = new DateTime(2024, 10, 20, 15, 8, 40, 399, DateTimeKind.Utc).AddTicks(8018)
+                            UpdateAt = new DateTime(2024, 10, 19, 19, 16, 8, 654, DateTimeKind.Utc).AddTicks(5115)
                         },
                         new
                         {
-                            Id = new Guid("a0e69d49-e7de-402e-8590-8552d69c07f8"),
-                            CreatedAt = new DateTime(2024, 10, 20, 15, 8, 40, 399, DateTimeKind.Utc).AddTicks(8047),
+                            Id = new Guid("25cf611a-119a-4cc7-9d60-82710db2c73c"),
+                            CreatedAt = new DateTime(2024, 10, 19, 19, 16, 8, 654, DateTimeKind.Utc).AddTicks(5148),
                             Description = "Donate your sport or fitness equipment.",
                             Name = "Sports of Fitness Equipment",
-                            UpdateAt = new DateTime(2024, 10, 20, 15, 8, 40, 399, DateTimeKind.Utc).AddTicks(8057)
+                            UpdateAt = new DateTime(2024, 10, 19, 19, 16, 8, 654, DateTimeKind.Utc).AddTicks(5163)
                         },
                         new
                         {
-                            Id = new Guid("f5952b36-6c30-400b-98d4-ffee8329d0da"),
-                            CreatedAt = new DateTime(2024, 10, 20, 15, 8, 40, 399, DateTimeKind.Utc).AddTicks(8086),
+                            Id = new Guid("748520d8-f493-460c-874d-ef0503d5106b"),
+                            CreatedAt = new DateTime(2024, 10, 19, 19, 16, 8, 654, DateTimeKind.Utc).AddTicks(5192),
                             Description = "Donate your food and groceries.",
                             Name = "Food and Groceries",
-                            UpdateAt = new DateTime(2024, 10, 20, 15, 8, 40, 399, DateTimeKind.Utc).AddTicks(8100)
+                            UpdateAt = new DateTime(2024, 10, 19, 19, 16, 8, 654, DateTimeKind.Utc).AddTicks(5207)
                         });
                 });
 
@@ -731,10 +734,6 @@ namespace Local_Alternatives.Migrations
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uuid");
-
-                    b.Property<string>("CompanyId")
-                        .IsRequired()
-                        .HasColumnType("text");
 
                     b.Property<string>("Description")
                         .HasColumnType("text");
@@ -747,9 +746,22 @@ namespace Local_Alternatives.Migrations
 
                     b.HasKey("Id");
 
+                    b.ToTable("Products");
+                });
+
+            modelBuilder.Entity("Local_Alternatives.Models.ProductCompany", b =>
+                {
+                    b.Property<Guid>("ProductId")
+                        .HasColumnType("uuid");
+
+                    b.Property<string>("CompanyId")
+                        .HasColumnType("text");
+
+                    b.HasKey("ProductId", "CompanyId");
+
                     b.HasIndex("CompanyId");
 
-                    b.ToTable("Products");
+                    b.ToTable("ProductCompanies");
                 });
 
             modelBuilder.Entity("Local_Alternatives.Models.ProductSubCategories", b =>
@@ -797,255 +809,255 @@ namespace Local_Alternatives.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("ab3801f2-3b79-45a6-8289-860e9f0dd3b3"),
-                            CreatedAt = new DateTime(2024, 10, 20, 15, 8, 40, 399, DateTimeKind.Utc).AddTicks(8286),
+                            Id = new Guid("8821909d-343c-4052-aa76-3fdfe6d265b9"),
+                            CreatedAt = new DateTime(2024, 10, 19, 19, 16, 8, 654, DateTimeKind.Utc).AddTicks(5572),
                             Description = "Apparel for men",
-                            MainCategoryId = new Guid("f3fc0e6e-3680-474c-8e6f-23308dcb0c4d"),
+                            MainCategoryId = new Guid("91eda985-20ca-4b8c-a815-1b94be9eed38"),
                             Name = "Men's Clothing",
-                            UpdateAt = new DateTime(2024, 10, 20, 15, 8, 40, 399, DateTimeKind.Utc).AddTicks(8296)
+                            UpdateAt = new DateTime(2024, 10, 19, 19, 16, 8, 654, DateTimeKind.Utc).AddTicks(5586)
                         },
                         new
                         {
-                            Id = new Guid("5c614bc8-852b-4298-a475-fcac70cd5e81"),
-                            CreatedAt = new DateTime(2024, 10, 20, 15, 8, 40, 399, DateTimeKind.Utc).AddTicks(8328),
+                            Id = new Guid("74320894-bf4d-4843-a6f0-5fbcd6f50067"),
+                            CreatedAt = new DateTime(2024, 10, 19, 19, 16, 8, 654, DateTimeKind.Utc).AddTicks(5618),
                             Description = "Apparel for women",
-                            MainCategoryId = new Guid("f3fc0e6e-3680-474c-8e6f-23308dcb0c4d"),
+                            MainCategoryId = new Guid("91eda985-20ca-4b8c-a815-1b94be9eed38"),
                             Name = "Women's Clothing",
-                            UpdateAt = new DateTime(2024, 10, 20, 15, 8, 40, 399, DateTimeKind.Utc).AddTicks(8338)
+                            UpdateAt = new DateTime(2024, 10, 19, 19, 16, 8, 654, DateTimeKind.Utc).AddTicks(5632)
                         },
                         new
                         {
-                            Id = new Guid("dbef7c89-ee55-4a9d-b0b8-307d3f141f73"),
-                            CreatedAt = new DateTime(2024, 10, 20, 15, 8, 40, 399, DateTimeKind.Utc).AddTicks(8367),
+                            Id = new Guid("42fe690f-dff1-4727-804b-257eb2efa4b2"),
+                            CreatedAt = new DateTime(2024, 10, 19, 19, 16, 8, 654, DateTimeKind.Utc).AddTicks(5665),
                             Description = "Apparel for children",
-                            MainCategoryId = new Guid("f3fc0e6e-3680-474c-8e6f-23308dcb0c4d"),
+                            MainCategoryId = new Guid("91eda985-20ca-4b8c-a815-1b94be9eed38"),
                             Name = "Children's Clothing",
-                            UpdateAt = new DateTime(2024, 10, 20, 15, 8, 40, 399, DateTimeKind.Utc).AddTicks(8381)
+                            UpdateAt = new DateTime(2024, 10, 19, 19, 16, 8, 654, DateTimeKind.Utc).AddTicks(5679)
                         },
                         new
                         {
-                            Id = new Guid("1d929b69-e3cb-4905-919e-77b7934a6bc7"),
-                            CreatedAt = new DateTime(2024, 10, 20, 15, 8, 40, 399, DateTimeKind.Utc).AddTicks(8410),
+                            Id = new Guid("2377552c-b0c6-4542-9ac4-71b0851683d4"),
+                            CreatedAt = new DateTime(2024, 10, 19, 19, 16, 8, 654, DateTimeKind.Utc).AddTicks(5712),
                             Description = "Footwear for all",
-                            MainCategoryId = new Guid("f3fc0e6e-3680-474c-8e6f-23308dcb0c4d"),
+                            MainCategoryId = new Guid("91eda985-20ca-4b8c-a815-1b94be9eed38"),
                             Name = "Shoes & Footwear",
-                            UpdateAt = new DateTime(2024, 10, 20, 15, 8, 40, 399, DateTimeKind.Utc).AddTicks(8420)
+                            UpdateAt = new DateTime(2024, 10, 19, 19, 16, 8, 654, DateTimeKind.Utc).AddTicks(5722)
                         },
                         new
                         {
-                            Id = new Guid("0cec48ea-6edd-429b-8d5b-c224257cfd90"),
-                            CreatedAt = new DateTime(2024, 10, 20, 15, 8, 40, 399, DateTimeKind.Utc).AddTicks(8453),
+                            Id = new Guid("e885b356-abab-4127-9145-d0342af77c1e"),
+                            CreatedAt = new DateTime(2024, 10, 19, 19, 16, 8, 654, DateTimeKind.Utc).AddTicks(5755),
                             Description = "Hats, scarves, belts, etc.",
-                            MainCategoryId = new Guid("f3fc0e6e-3680-474c-8e6f-23308dcb0c4d"),
+                            MainCategoryId = new Guid("91eda985-20ca-4b8c-a815-1b94be9eed38"),
                             Name = "Accessories",
-                            UpdateAt = new DateTime(2024, 10, 20, 15, 8, 40, 399, DateTimeKind.Utc).AddTicks(8463)
+                            UpdateAt = new DateTime(2024, 10, 19, 19, 16, 8, 654, DateTimeKind.Utc).AddTicks(5769)
                         },
                         new
                         {
-                            Id = new Guid("c08fbfa2-3cce-4d0d-829e-e9587ef916de"),
-                            CreatedAt = new DateTime(2024, 10, 20, 15, 8, 40, 399, DateTimeKind.Utc).AddTicks(8492),
+                            Id = new Guid("58972642-a610-483b-ac1e-e6e641eba440"),
+                            CreatedAt = new DateTime(2024, 10, 19, 19, 16, 8, 654, DateTimeKind.Utc).AddTicks(5803),
                             Description = "Household furniture",
-                            MainCategoryId = new Guid("f2467b5e-dbdc-49d0-bc8e-bb50ff7152c0"),
+                            MainCategoryId = new Guid("8c2dd92a-03d6-4d8c-af45-3346ddb8f8fe"),
                             Name = "Furniture",
-                            UpdateAt = new DateTime(2024, 10, 20, 15, 8, 40, 399, DateTimeKind.Utc).AddTicks(8506)
+                            UpdateAt = new DateTime(2024, 10, 19, 19, 16, 8, 654, DateTimeKind.Utc).AddTicks(5817)
                         },
                         new
                         {
-                            Id = new Guid("d54882ac-a732-4658-b9c3-d23f2897d9b5"),
-                            CreatedAt = new DateTime(2024, 10, 20, 15, 8, 40, 399, DateTimeKind.Utc).AddTicks(8534),
+                            Id = new Guid("7a14684a-2a1f-44a3-8a76-f65b468f408e"),
+                            CreatedAt = new DateTime(2024, 10, 19, 19, 16, 8, 654, DateTimeKind.Utc).AddTicks(5851),
                             Description = "Utensils and appliances for the kitchen",
-                            MainCategoryId = new Guid("f2467b5e-dbdc-49d0-bc8e-bb50ff7152c0"),
+                            MainCategoryId = new Guid("8c2dd92a-03d6-4d8c-af45-3346ddb8f8fe"),
                             Name = "Kitchenware",
-                            UpdateAt = new DateTime(2024, 10, 20, 15, 8, 40, 399, DateTimeKind.Utc).AddTicks(8549)
+                            UpdateAt = new DateTime(2024, 10, 19, 19, 16, 8, 654, DateTimeKind.Utc).AddTicks(5865)
                         },
                         new
                         {
-                            Id = new Guid("a8d47491-1f2a-4846-b908-a705ab524319"),
-                            CreatedAt = new DateTime(2024, 10, 20, 15, 8, 40, 399, DateTimeKind.Utc).AddTicks(8577),
+                            Id = new Guid("9cd724ca-95c4-409b-ac90-78c3fc76c47e"),
+                            CreatedAt = new DateTime(2024, 10, 19, 19, 16, 8, 654, DateTimeKind.Utc).AddTicks(5898),
                             Description = "Bedding essentials",
-                            MainCategoryId = new Guid("f2467b5e-dbdc-49d0-bc8e-bb50ff7152c0"),
+                            MainCategoryId = new Guid("8c2dd92a-03d6-4d8c-af45-3346ddb8f8fe"),
                             Name = "Bedding & Linens",
-                            UpdateAt = new DateTime(2024, 10, 20, 15, 8, 40, 399, DateTimeKind.Utc).AddTicks(8591)
+                            UpdateAt = new DateTime(2024, 10, 19, 19, 16, 8, 654, DateTimeKind.Utc).AddTicks(5908)
                         },
                         new
                         {
-                            Id = new Guid("0371a0dc-3f67-48a4-a9ac-3afd4efb4a1a"),
-                            CreatedAt = new DateTime(2024, 10, 20, 15, 8, 40, 399, DateTimeKind.Utc).AddTicks(8620),
+                            Id = new Guid("a795010f-438a-44a2-aeec-d4697947753e"),
+                            CreatedAt = new DateTime(2024, 10, 19, 19, 16, 8, 654, DateTimeKind.Utc).AddTicks(5942),
                             Description = "Cleaning essentials",
-                            MainCategoryId = new Guid("f2467b5e-dbdc-49d0-bc8e-bb50ff7152c0"),
+                            MainCategoryId = new Guid("8c2dd92a-03d6-4d8c-af45-3346ddb8f8fe"),
                             Name = "Cleaning Supplies",
-                            UpdateAt = new DateTime(2024, 10, 20, 15, 8, 40, 399, DateTimeKind.Utc).AddTicks(8634)
+                            UpdateAt = new DateTime(2024, 10, 19, 19, 16, 8, 654, DateTimeKind.Utc).AddTicks(5961)
                         },
                         new
                         {
-                            Id = new Guid("52321732-0d72-4482-96ab-ad940d73f1f9"),
-                            CreatedAt = new DateTime(2024, 10, 20, 15, 8, 40, 399, DateTimeKind.Utc).AddTicks(8662),
+                            Id = new Guid("07cd265c-4220-4444-b35f-decd5b0d6619"),
+                            CreatedAt = new DateTime(2024, 10, 19, 19, 16, 8, 654, DateTimeKind.Utc).AddTicks(5984),
                             Description = "Decorative items for the home",
-                            MainCategoryId = new Guid("f2467b5e-dbdc-49d0-bc8e-bb50ff7152c0"),
+                            MainCategoryId = new Guid("8c2dd92a-03d6-4d8c-af45-3346ddb8f8fe"),
                             Name = "Home Décor",
-                            UpdateAt = new DateTime(2024, 10, 20, 15, 8, 40, 399, DateTimeKind.Utc).AddTicks(8672)
+                            UpdateAt = new DateTime(2024, 10, 19, 19, 16, 8, 654, DateTimeKind.Utc).AddTicks(5998)
                         },
                         new
                         {
-                            Id = new Guid("8f8eaefd-5914-4d2a-8d67-e35ab3e075d8"),
-                            CreatedAt = new DateTime(2024, 10, 20, 15, 8, 40, 399, DateTimeKind.Utc).AddTicks(8706),
+                            Id = new Guid("f313068d-6212-4602-8d13-2dcee7348db1"),
+                            CreatedAt = new DateTime(2024, 10, 19, 19, 16, 8, 654, DateTimeKind.Utc).AddTicks(6027),
                             Description = "Computers and laptops",
-                            MainCategoryId = new Guid("b5ab8629-0325-4957-8d14-90c0958a1237"),
+                            MainCategoryId = new Guid("a46a2c92-a386-4e8f-b47d-8abecd242914"),
                             Name = "Computers & Laptops",
-                            UpdateAt = new DateTime(2024, 10, 20, 15, 8, 40, 399, DateTimeKind.Utc).AddTicks(8715)
+                            UpdateAt = new DateTime(2024, 10, 19, 19, 16, 8, 654, DateTimeKind.Utc).AddTicks(6041)
                         },
                         new
                         {
-                            Id = new Guid("82bbd4a1-0314-437c-b6fe-83cd003e8fa5"),
-                            CreatedAt = new DateTime(2024, 10, 20, 15, 8, 40, 399, DateTimeKind.Utc).AddTicks(8792),
+                            Id = new Guid("00d97da3-5013-4842-aa9e-d3d344671f19"),
+                            CreatedAt = new DateTime(2024, 10, 19, 19, 16, 8, 654, DateTimeKind.Utc).AddTicks(6127),
                             Description = "Smartphones and tablets",
-                            MainCategoryId = new Guid("b5ab8629-0325-4957-8d14-90c0958a1237"),
+                            MainCategoryId = new Guid("a46a2c92-a386-4e8f-b47d-8abecd242914"),
                             Name = "Mobile Phones & Tablets",
-                            UpdateAt = new DateTime(2024, 10, 20, 15, 8, 40, 399, DateTimeKind.Utc).AddTicks(8802)
+                            UpdateAt = new DateTime(2024, 10, 19, 19, 16, 8, 654, DateTimeKind.Utc).AddTicks(6137)
                         },
                         new
                         {
-                            Id = new Guid("53f3a12d-141e-473e-a207-0642204315fd"),
-                            CreatedAt = new DateTime(2024, 10, 20, 15, 8, 40, 399, DateTimeKind.Utc).AddTicks(8830),
+                            Id = new Guid("0d27b32c-50b7-4e84-ad02-512dab3326e0"),
+                            CreatedAt = new DateTime(2024, 10, 19, 19, 16, 8, 654, DateTimeKind.Utc).AddTicks(6170),
                             Description = "Appliances for home use",
-                            MainCategoryId = new Guid("b5ab8629-0325-4957-8d14-90c0958a1237"),
+                            MainCategoryId = new Guid("a46a2c92-a386-4e8f-b47d-8abecd242914"),
                             Name = "Home Appliances",
-                            UpdateAt = new DateTime(2024, 10, 20, 15, 8, 40, 399, DateTimeKind.Utc).AddTicks(8845)
+                            UpdateAt = new DateTime(2024, 10, 19, 19, 16, 8, 654, DateTimeKind.Utc).AddTicks(6185)
                         },
                         new
                         {
-                            Id = new Guid("f0be4314-a4ec-4049-af56-a022cd66f6d8"),
-                            CreatedAt = new DateTime(2024, 10, 20, 15, 8, 40, 399, DateTimeKind.Utc).AddTicks(8873),
+                            Id = new Guid("a39ca185-896e-4204-a0fc-ecda89042796"),
+                            CreatedAt = new DateTime(2024, 10, 19, 19, 16, 8, 654, DateTimeKind.Utc).AddTicks(6209),
                             Description = "Televisions and audio equipment",
-                            MainCategoryId = new Guid("b5ab8629-0325-4957-8d14-90c0958a1237"),
+                            MainCategoryId = new Guid("a46a2c92-a386-4e8f-b47d-8abecd242914"),
                             Name = "TVs & Audio Systems",
-                            UpdateAt = new DateTime(2024, 10, 20, 15, 8, 40, 399, DateTimeKind.Utc).AddTicks(8887)
+                            UpdateAt = new DateTime(2024, 10, 19, 19, 16, 8, 654, DateTimeKind.Utc).AddTicks(6223)
                         },
                         new
                         {
-                            Id = new Guid("3f1dfc4b-5f08-44ba-94bb-c55a2f1a3e42"),
-                            CreatedAt = new DateTime(2024, 10, 20, 15, 8, 40, 399, DateTimeKind.Utc).AddTicks(8916),
+                            Id = new Guid("85666865-f177-4d11-8e38-ad3a50700037"),
+                            CreatedAt = new DateTime(2024, 10, 19, 19, 16, 8, 654, DateTimeKind.Utc).AddTicks(6252),
                             Description = "Fiction, non-fiction, educational",
-                            MainCategoryId = new Guid("2953a775-a8e5-4221-aa90-76f67de9fc25"),
+                            MainCategoryId = new Guid("113e3004-76b3-4a28-a4e2-c6135914eb11"),
                             Name = "Books",
-                            UpdateAt = new DateTime(2024, 10, 20, 15, 8, 40, 399, DateTimeKind.Utc).AddTicks(8925)
+                            UpdateAt = new DateTime(2024, 10, 19, 19, 16, 8, 654, DateTimeKind.Utc).AddTicks(6266)
                         },
                         new
                         {
-                            Id = new Guid("9bdbfaef-3b6f-453f-8d56-9c3de4249121"),
-                            CreatedAt = new DateTime(2024, 10, 20, 15, 8, 40, 399, DateTimeKind.Utc).AddTicks(8958),
+                            Id = new Guid("3bb0b472-7c5c-4280-8954-4adc22b2fb76"),
+                            CreatedAt = new DateTime(2024, 10, 19, 19, 16, 8, 654, DateTimeKind.Utc).AddTicks(6294),
                             Description = "Various magazines",
-                            MainCategoryId = new Guid("2953a775-a8e5-4221-aa90-76f67de9fc25"),
+                            MainCategoryId = new Guid("113e3004-76b3-4a28-a4e2-c6135914eb11"),
                             Name = "Magazines",
-                            UpdateAt = new DateTime(2024, 10, 20, 15, 8, 40, 399, DateTimeKind.Utc).AddTicks(8967)
+                            UpdateAt = new DateTime(2024, 10, 19, 19, 16, 8, 654, DateTimeKind.Utc).AddTicks(6308)
                         },
                         new
                         {
-                            Id = new Guid("771815de-e477-42b7-8d4d-cad22747c952"),
-                            CreatedAt = new DateTime(2024, 10, 20, 15, 8, 40, 399, DateTimeKind.Utc).AddTicks(8996),
+                            Id = new Guid("bca83898-9333-4991-ad77-488fe45f7f1e"),
+                            CreatedAt = new DateTime(2024, 10, 19, 19, 16, 8, 654, DateTimeKind.Utc).AddTicks(6341),
                             Description = "Media collection",
-                            MainCategoryId = new Guid("2953a775-a8e5-4221-aa90-76f67de9fc25"),
+                            MainCategoryId = new Guid("113e3004-76b3-4a28-a4e2-c6135914eb11"),
                             Name = "CDs, DVDs, Blu-rays",
-                            UpdateAt = new DateTime(2024, 10, 20, 15, 8, 40, 399, DateTimeKind.Utc).AddTicks(9011)
+                            UpdateAt = new DateTime(2024, 10, 19, 19, 16, 8, 654, DateTimeKind.Utc).AddTicks(6356)
                         },
                         new
                         {
-                            Id = new Guid("88cdf987-c7a8-420a-a4ac-94fa99a25d40"),
-                            CreatedAt = new DateTime(2024, 10, 20, 15, 8, 40, 399, DateTimeKind.Utc).AddTicks(9040),
+                            Id = new Guid("d2805996-9e87-496b-b3cb-235aa026de3f"),
+                            CreatedAt = new DateTime(2024, 10, 19, 19, 16, 8, 654, DateTimeKind.Utc).AddTicks(6389),
                             Description = "Games for fun and challenges",
-                            MainCategoryId = new Guid("862b0000-7d7c-48e7-be79-10d23a400ab4"),
+                            MainCategoryId = new Guid("d1bf02fc-ee77-4993-bb0d-51cd0041f8d5"),
                             Name = "Board Games & Puzzles",
-                            UpdateAt = new DateTime(2024, 10, 20, 15, 8, 40, 399, DateTimeKind.Utc).AddTicks(9055)
+                            UpdateAt = new DateTime(2024, 10, 19, 19, 16, 8, 654, DateTimeKind.Utc).AddTicks(6403)
                         },
                         new
                         {
-                            Id = new Guid("1822290d-4e1e-45be-80e0-9a82678c17c4"),
-                            CreatedAt = new DateTime(2024, 10, 20, 15, 8, 40, 399, DateTimeKind.Utc).AddTicks(9083),
+                            Id = new Guid("45cc336f-dcb3-470a-9001-c9fbaabea208"),
+                            CreatedAt = new DateTime(2024, 10, 19, 19, 16, 8, 654, DateTimeKind.Utc).AddTicks(6432),
                             Description = "Toys for young children",
-                            MainCategoryId = new Guid("862b0000-7d7c-48e7-be79-10d23a400ab4"),
+                            MainCategoryId = new Guid("d1bf02fc-ee77-4993-bb0d-51cd0041f8d5"),
                             Name = "Baby & Toddler Toys",
-                            UpdateAt = new DateTime(2024, 10, 20, 15, 8, 40, 399, DateTimeKind.Utc).AddTicks(9092)
+                            UpdateAt = new DateTime(2024, 10, 19, 19, 16, 8, 654, DateTimeKind.Utc).AddTicks(6447)
                         },
                         new
                         {
-                            Id = new Guid("5b5eddc5-7f59-49fe-b94c-44aa28a86922"),
-                            CreatedAt = new DateTime(2024, 10, 20, 15, 8, 40, 399, DateTimeKind.Utc).AddTicks(9126),
+                            Id = new Guid("9583b492-16b1-43fb-85f3-0b77c98abf1c"),
+                            CreatedAt = new DateTime(2024, 10, 19, 19, 16, 8, 654, DateTimeKind.Utc).AddTicks(6480),
                             Description = "Toys that promote learning",
-                            MainCategoryId = new Guid("862b0000-7d7c-48e7-be79-10d23a400ab4"),
+                            MainCategoryId = new Guid("d1bf02fc-ee77-4993-bb0d-51cd0041f8d5"),
                             Name = "Educational Toys",
-                            UpdateAt = new DateTime(2024, 10, 20, 15, 8, 40, 399, DateTimeKind.Utc).AddTicks(9135)
+                            UpdateAt = new DateTime(2024, 10, 19, 19, 16, 8, 654, DateTimeKind.Utc).AddTicks(6490)
                         },
                         new
                         {
-                            Id = new Guid("9a9b7791-886c-4b8d-bd5d-4f826235f823"),
-                            CreatedAt = new DateTime(2024, 10, 20, 15, 8, 40, 399, DateTimeKind.Utc).AddTicks(9169),
+                            Id = new Guid("9a078370-4ed4-4800-aaa6-45a1a7584291"),
+                            CreatedAt = new DateTime(2024, 10, 19, 19, 16, 8, 654, DateTimeKind.Utc).AddTicks(6524),
                             Description = "Gaming systems and games",
-                            MainCategoryId = new Guid("862b0000-7d7c-48e7-be79-10d23a400ab4"),
+                            MainCategoryId = new Guid("d1bf02fc-ee77-4993-bb0d-51cd0041f8d5"),
                             Name = "Video Games & Consoles",
-                            UpdateAt = new DateTime(2024, 10, 20, 15, 8, 40, 399, DateTimeKind.Utc).AddTicks(9178)
+                            UpdateAt = new DateTime(2024, 10, 19, 19, 16, 8, 654, DateTimeKind.Utc).AddTicks(6538)
                         },
                         new
                         {
-                            Id = new Guid("31513b82-1374-4f1f-9eca-edf159b81063"),
-                            CreatedAt = new DateTime(2024, 10, 20, 15, 8, 40, 399, DateTimeKind.Utc).AddTicks(9211),
+                            Id = new Guid("9eb4cdeb-5b75-4ac0-b2b6-1445fbdb3bcf"),
+                            CreatedAt = new DateTime(2024, 10, 19, 19, 16, 8, 654, DateTimeKind.Utc).AddTicks(6571),
                             Description = "Equipment for gym workouts",
-                            MainCategoryId = new Guid("a0e69d49-e7de-402e-8590-8552d69c07f8"),
+                            MainCategoryId = new Guid("25cf611a-119a-4cc7-9d60-82710db2c73c"),
                             Name = "Gym Equipment",
-                            UpdateAt = new DateTime(2024, 10, 20, 15, 8, 40, 399, DateTimeKind.Utc).AddTicks(9221)
+                            UpdateAt = new DateTime(2024, 10, 19, 19, 16, 8, 654, DateTimeKind.Utc).AddTicks(6580)
                         },
                         new
                         {
-                            Id = new Guid("e08400d8-3998-4aae-b2e5-041b093e405c"),
-                            CreatedAt = new DateTime(2024, 10, 20, 15, 8, 40, 399, DateTimeKind.Utc).AddTicks(9249),
+                            Id = new Guid("966a451a-1d4c-40e0-84d1-c81f275396d2"),
+                            CreatedAt = new DateTime(2024, 10, 19, 19, 16, 8, 654, DateTimeKind.Utc).AddTicks(6609),
                             Description = "Gear for various sports",
-                            MainCategoryId = new Guid("a0e69d49-e7de-402e-8590-8552d69c07f8"),
+                            MainCategoryId = new Guid("25cf611a-119a-4cc7-9d60-82710db2c73c"),
                             Name = "Sports Gear",
-                            UpdateAt = new DateTime(2024, 10, 20, 15, 8, 40, 399, DateTimeKind.Utc).AddTicks(9263)
+                            UpdateAt = new DateTime(2024, 10, 19, 19, 16, 8, 654, DateTimeKind.Utc).AddTicks(6623)
                         },
                         new
                         {
-                            Id = new Guid("14c383ba-c427-42cd-b072-3dc596c8936a"),
-                            CreatedAt = new DateTime(2024, 10, 20, 15, 8, 40, 399, DateTimeKind.Utc).AddTicks(9292),
+                            Id = new Guid("886df892-eee1-4aca-946f-2873de3c1b51"),
+                            CreatedAt = new DateTime(2024, 10, 19, 19, 16, 8, 654, DateTimeKind.Utc).AddTicks(6651),
                             Description = "Bicycles and scooters for all ages",
-                            MainCategoryId = new Guid("a0e69d49-e7de-402e-8590-8552d69c07f8"),
+                            MainCategoryId = new Guid("25cf611a-119a-4cc7-9d60-82710db2c73c"),
                             Name = "Bicycles & Scooters",
-                            UpdateAt = new DateTime(2024, 10, 20, 15, 8, 40, 399, DateTimeKind.Utc).AddTicks(9306)
+                            UpdateAt = new DateTime(2024, 10, 19, 19, 16, 8, 654, DateTimeKind.Utc).AddTicks(6666)
                         },
                         new
                         {
-                            Id = new Guid("36d2f721-a80f-4377-b0a5-b2f385759d72"),
-                            CreatedAt = new DateTime(2024, 10, 20, 15, 8, 40, 399, DateTimeKind.Utc).AddTicks(9336),
+                            Id = new Guid("cfef1b6e-b90e-439d-8e4d-08d8135ccf36"),
+                            CreatedAt = new DateTime(2024, 10, 19, 19, 16, 8, 654, DateTimeKind.Utc).AddTicks(6699),
                             Description = "Equipment for outdoor activities",
-                            MainCategoryId = new Guid("a0e69d49-e7de-402e-8590-8552d69c07f8"),
+                            MainCategoryId = new Guid("25cf611a-119a-4cc7-9d60-82710db2c73c"),
                             Name = "Camping & Outdoor Gear",
-                            UpdateAt = new DateTime(2024, 10, 20, 15, 8, 40, 399, DateTimeKind.Utc).AddTicks(9345)
+                            UpdateAt = new DateTime(2024, 10, 19, 19, 16, 8, 654, DateTimeKind.Utc).AddTicks(6709)
                         },
                         new
                         {
-                            Id = new Guid("d0f4b861-a4d2-4e7a-8d52-8c82e753327b"),
-                            CreatedAt = new DateTime(2024, 10, 20, 15, 8, 40, 399, DateTimeKind.Utc).AddTicks(9379),
+                            Id = new Guid("af812318-d220-40a7-8301-89b67df2586f"),
+                            CreatedAt = new DateTime(2024, 10, 19, 19, 16, 8, 654, DateTimeKind.Utc).AddTicks(6742),
                             Description = "Canned food items",
-                            MainCategoryId = new Guid("f5952b36-6c30-400b-98d4-ffee8329d0da"),
+                            MainCategoryId = new Guid("748520d8-f493-460c-874d-ef0503d5106b"),
                             Name = "Canned Goods",
-                            UpdateAt = new DateTime(2024, 10, 20, 15, 8, 40, 399, DateTimeKind.Utc).AddTicks(9389)
+                            UpdateAt = new DateTime(2024, 10, 19, 19, 16, 8, 654, DateTimeKind.Utc).AddTicks(6756)
                         },
                         new
                         {
-                            Id = new Guid("1f597dd5-8742-4443-9e71-e4ebb6cadd94"),
-                            CreatedAt = new DateTime(2024, 10, 20, 15, 8, 40, 399, DateTimeKind.Utc).AddTicks(9417),
+                            Id = new Guid("6fccb3bd-b9e9-424f-99c8-5cc152776831"),
+                            CreatedAt = new DateTime(2024, 10, 19, 19, 16, 8, 654, DateTimeKind.Utc).AddTicks(6785),
                             Description = "Non-perishable food products",
-                            MainCategoryId = new Guid("f5952b36-6c30-400b-98d4-ffee8329d0da"),
+                            MainCategoryId = new Guid("748520d8-f493-460c-874d-ef0503d5106b"),
                             Name = "Non-Perishable Items",
-                            UpdateAt = new DateTime(2024, 10, 20, 15, 8, 40, 399, DateTimeKind.Utc).AddTicks(9431)
+                            UpdateAt = new DateTime(2024, 10, 19, 19, 16, 8, 654, DateTimeKind.Utc).AddTicks(6800)
                         },
                         new
                         {
-                            Id = new Guid("bdd2f1f5-1acb-4f62-aaad-79bee683a3c8"),
-                            CreatedAt = new DateTime(2024, 10, 20, 15, 8, 40, 399, DateTimeKind.Utc).AddTicks(9459),
+                            Id = new Guid("74a28754-887f-41c2-bb66-d508411d5d43"),
+                            CreatedAt = new DateTime(2024, 10, 19, 19, 16, 8, 654, DateTimeKind.Utc).AddTicks(6834),
                             Description = "Food and formula for infants",
-                            MainCategoryId = new Guid("f5952b36-6c30-400b-98d4-ffee8329d0da"),
+                            MainCategoryId = new Guid("748520d8-f493-460c-874d-ef0503d5106b"),
                             Name = "Baby Food & Formula",
-                            UpdateAt = new DateTime(2024, 10, 20, 15, 8, 40, 399, DateTimeKind.Utc).AddTicks(9473)
+                            UpdateAt = new DateTime(2024, 10, 19, 19, 16, 8, 654, DateTimeKind.Utc).AddTicks(6843)
                         });
                 });
 
@@ -1077,19 +1089,19 @@ namespace Local_Alternatives.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "dc69c964-c1fd-46e0-a09c-01a50a5e8055",
+                            Id = "a408b5f0-8a13-458e-897c-310ad60ac20a",
                             Name = "Admin",
                             NormalizedName = "ADMIN"
                         },
                         new
                         {
-                            Id = "f72dde1e-f637-48a6-9b66-232f9e791a47",
+                            Id = "30de0ac3-53c0-4db9-a75b-802b4a1e04e1",
                             Name = "User",
                             NormalizedName = "USER"
                         },
                         new
                         {
-                            Id = "c922ec14-c8b7-4ecc-8cb5-c8444adc4596",
+                            Id = "1199aed2-9165-4967-8460-d8cfd3063f14",
                             Name = "Company",
                             NormalizedName = "COMPANY"
                         });
@@ -1269,15 +1281,23 @@ namespace Local_Alternatives.Migrations
                     b.HasDiscriminator().HasValue("NormalUser");
                 });
 
-            modelBuilder.Entity("Local_Alternatives.Models.Product", b =>
+            modelBuilder.Entity("Local_Alternatives.Models.ProductCompany", b =>
                 {
                     b.HasOne("Local_Alternatives.Models.Company", "Company")
-                        .WithMany("Products")
+                        .WithMany("ProductCompanies")
                         .HasForeignKey("CompanyId")
-                        .OnDelete(DeleteBehavior.Restrict)
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Local_Alternatives.Models.Product", "Product")
+                        .WithMany("ProductCompanies")
+                        .HasForeignKey("ProductId")
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.Navigation("Company");
+
+                    b.Navigation("Product");
                 });
 
             modelBuilder.Entity("Local_Alternatives.Models.ProductSubCategories", b =>
@@ -1397,6 +1417,8 @@ namespace Local_Alternatives.Migrations
 
             modelBuilder.Entity("Local_Alternatives.Models.Product", b =>
                 {
+                    b.Navigation("ProductCompanies");
+
                     b.Navigation("ProductSubCategories");
                 });
 
@@ -1407,7 +1429,7 @@ namespace Local_Alternatives.Migrations
 
             modelBuilder.Entity("Local_Alternatives.Models.Company", b =>
                 {
-                    b.Navigation("Products");
+                    b.Navigation("ProductCompanies");
                 });
 #pragma warning restore 612, 618
         }

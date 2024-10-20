@@ -66,9 +66,10 @@ public class ApplicationDbContext : IdentityDbContext<AppUser>
             .HasForeignKey(sc => sc.SubCategoryId);
 
         builder.Entity<Product>()
-            .HasOne(p => p.Company)
-            .WithMany(c => c.Products)
-            .HasForeignKey(p => p.CompanyId);
+            .HasOne(c => c.Company)
+            .WithMany(p => p.Products)
+            .HasForeignKey(c => c.CompanyId)
+            .OnDelete(DeleteBehavior.Restrict);
 
         List<IdentityRole> roles = new List<IdentityRole>
         {

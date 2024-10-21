@@ -1,6 +1,7 @@
 using api.Interfaces;
 using Local_Alternatives.Dtos.Account;
 using Local_Alternatives.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -14,13 +15,15 @@ public class AccountController : ControllerBase
     private readonly UserManager<AppUser> _userManager;
     private readonly ITokenService _tokenService;
     private readonly SignInManager<AppUser> _signInManager;
-
+    private readonly IUserRepository _userRepository;
     public AccountController(UserManager<AppUser> userManager,
-        ITokenService tokenService, SignInManager<AppUser> signInManager)
+        ITokenService tokenService, SignInManager<AppUser> signInManager,
+        IUserRepository userRepository)
     {
         _userManager = userManager;
         _tokenService = tokenService;
         _signInManager = signInManager;
+        _userRepository = userRepository;
     }
 
     [HttpPost("register")]
@@ -91,5 +94,27 @@ public class AccountController : ControllerBase
                 Token = _tokenService.CreateToken(user)
             }
         );
+    }
+    
+    /*
+     * OTHER ENDPOINTS
+     */
+    [HttpGet("/profile")]
+    [Authorize]
+    public async Task<IActionResult> GetProfile()
+    {
+        try
+        {
+            if (!ModelState.IsValid) return BadRequest(ModelState);
+
+            var user = await _userRepository.UserData();
+
+            return Ok(user);
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+            throw;
+        }
     }
 }

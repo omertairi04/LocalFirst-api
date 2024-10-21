@@ -91,6 +91,9 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
 builder.Services.AddScoped<ITokenService, TokenService>();
 builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
 builder.Services.AddScoped<IProductRepository, ProductRepository>();
+builder.Services.AddScoped<IUserRepository, UserRepository>();
+// Register IHttpContextAccessor as a singleton
+builder.Services.AddHttpContextAccessor();
 
 var app = builder.Build();
 

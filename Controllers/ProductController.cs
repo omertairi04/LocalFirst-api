@@ -13,12 +13,10 @@ namespace Local_Alternatives.Controllers;
 [ApiController]
 public class ProductController : ControllerBase
 {
-    private readonly ApplicationDbContext _context;
     private readonly IProductRepository _productRepository;
 
-    public ProductController(ApplicationDbContext context, IProductRepository productRepository)
+    public ProductController(IProductRepository productRepository)
     {
-        _context = context;
         _productRepository = productRepository;
     }
 
@@ -64,13 +62,6 @@ public class ProductController : ControllerBase
         {
             if (!ModelState.IsValid) return BadRequest(ModelState);
 
-            // Log claims for debugging
-            var claims = User.Claims.ToList();
-            foreach (var claim in claims)
-            {
-                Console.WriteLine($"Claim Type: {claim.Type}, Claim Value: {claim.Value}");
-            }
-
             // Retrieve the user ID from the claims
             var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
             var userRole = User.FindFirstValue(ClaimTypes.Role);
@@ -95,7 +86,7 @@ public class ProductController : ControllerBase
             return StatusCode(500, "Error creating product: " + e.Message);
         }
     }
-    
+
     [HttpPut("{id}")]
     [Authorize]
     public async Task<IActionResult> UpdateProduct([FromRoute] Guid id, [FromBody] UpdateProductDto product)
